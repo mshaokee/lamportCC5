@@ -4,14 +4,50 @@ import React, { Component } from 'react';
 // BUTTONS SHOULD INCREASE OR DECREASE SPEED, RESPECTIVELY
 
 class SpeedControl extends Component {
+  //set state for speed
+  state = {
+    speed: 0
+  }
+
+  componentDidMount(){
+    console.log('Speed Control Mounted. Speed: ', this.state.speed);
+  };//end componentDidMount
+
+  //speedHandler to adjust speed
+  speedHandler = (event, property) => {
+    console.log('adjusting Speed');
+    if(property === 'increase'){
+      //increase state of speed by 1
+      this.setState({
+        speed: this.state.speed + 1
+      })
+      // dispatch to store information
+      this.props.dispatch({
+        type: 'increase',
+        payload: 1
+      })
+    } else if(property === 'decrease'){
+      //decrease state of speed by 1
+      this.setState({
+        speed: this.state.speed - 1
+      })
+      //dispatch to store information
+       //dispatch to store information
+      // this.props.dispatch({
+      //   type: 'decrease',
+      //   payload: 1
+      // })
+    }
+  };//end speedHandler
+
   render() {
     return (
       <div>
         <h2>Speed Control</h2>
 
-        <button>Increase Speed</button>
-        <p>SPEED: GOES HERE</p>
-        <button>Decrease Speed</button>
+        <button onClick={(event) => this.speedHandler(event, 'increase')}>Increase Speed</button>
+        <p>{this.state.speed}</p>
+        <button onClick={(event) => this.speedHandler(event, 'decrease')}>Decrease Speed</button>
       </div>
     )
   }
