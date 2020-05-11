@@ -4,15 +4,30 @@ import React, { Component } from 'react';
 // INPUT SHOULD COLLECT INFO, BUTTON SHOULD ADD THEM TO THE LIST
 
 class Passengers extends Component {
+
+  state = {
+    passengers: []
+  }
+
+  handleChange = (event, property) => {
+    console.log('in handleChange passengers', event.target.value);
+    this.setState({
+      ...this.state.passengers,
+      [property]: event.target.value
+    })
+  };//end handleChange
+
   render() {
     return (
       <div>
         <h2>Passengers</h2>
 
-        <input type="text" name="name" placeholder="Enter Name" />
+        <input onChange={(event) => this.handleChange(event, 'passengers')}type="text" name="name" placeholder="Enter Name" />
         <button>Add Passenger</button>
 
-        <ul>PASSENGER LIST: GOES HERE</ul>
+        <ul>
+          <li>{this.state.passengers}</li>
+        </ul>
       
       </div>
     )

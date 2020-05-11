@@ -16,7 +16,10 @@ const myReducer = (state = reducerInitialState, action) => {
     console.log('in myReducer', action, state);
     // if(action.type === 'increase'){
     //     console.log('increasing speed', action.payload);
-    //     return this.state.speed + action.payload
+    //     return this.state.speed + action.payload;
+    // } else if(action.type === 'decrease'){
+    //     console.log('decreasing speed', action.payload);
+    //     return this.state.speed - action.payload;
     // }
     return state;
 };//end myReducer

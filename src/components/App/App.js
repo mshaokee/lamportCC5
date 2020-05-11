@@ -43,10 +43,12 @@ class App extends Component {
             />
             <Route
               path="/passengers"
+              dispatch={this.props.dispatch}
               component={Passengers}
             />
             <Route
               path="/dashboard"
+              dispatch={this.props.dispatch}
               component={Dashboard}
             />
           </div>
