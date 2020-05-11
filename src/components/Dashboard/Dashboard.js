@@ -14,9 +14,8 @@ class Dashboard extends Component {
     return (
       <div>
         <h2>Dashboard</h2>
-{/*         
         <p>{this.props.dashboard.speed}</p>
-        <p>{this.props.dashboard.passengers}</p> */}
+        {/* <p>{this.props.dashboard.passengers}</p> */}
       </div>
     )
   }
