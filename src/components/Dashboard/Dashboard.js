@@ -15,7 +15,8 @@ class Dashboard extends Component {
       <div>
         <h2>Dashboard</h2>
         <p>{this.props.dashboard.speed}</p>
-        {/* <p>{this.props.dashboard.passengers}</p> */}
+        {/* .length because we want number of people */}
+        <p>{this.props.dashboard.passengers.length}</p>
       </div>
     )
   }

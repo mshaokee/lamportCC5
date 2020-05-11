@@ -14,7 +14,7 @@ import Dashboard from '../Dashboard/Dashboard';
 class App extends Component {
 
   componentDidMount() {
-    console.log('CHECK APP STATUS', this.props.reduxState);
+    console.log('CHECK APP STATUS', this.props.reduxState.passengers);
     // console.log('DOES THIS WORK', this.props.dispatch);
 
   }
@@ -47,7 +47,7 @@ class App extends Component {
             <Route
               path="/passengers"
               render={(props) => <Passengers {...props}
-                passengers={this.props.reduxState}
+                seating={this.props.reduxState.passengers}
                 dispatch={this.props.dispatch} />} />
             <Route
               path="/dashboard"
