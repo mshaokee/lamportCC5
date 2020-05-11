@@ -23,8 +23,7 @@ class SpeedControl extends Component {
       })
       // dispatch to store information
       this.props.dispatch({
-        type: 'increase',
-        payload: 1
+        type: 'increase'
       })
     } else if(property === 'decrease'){
       //decrease state of speed by 1
@@ -33,8 +32,7 @@ class SpeedControl extends Component {
       })
       // dispatch to store information
       this.props.dispatch({
-        type: 'decrease',
-        payload: 1
+        type: 'decrease'
       })
     }
   };//end speedHandler
