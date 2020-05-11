@@ -15,15 +15,16 @@ const reducerInitialState = {
 
 //create myReducer to take in action
 const myReducer = (state = reducerInitialState, action) => {
-    // console.log('in myReducer', action, state);
+    console.log('in myReducer', action, state);
     if(action.type === 'increase'){
-        console.log('increasing speed', action.payload);
-        return this.state.speed + action.payload;
+        console.log('increasing speed');
+        return state.speed + action.payload;
     }
-    //  else if(action.type === 'decrease'){
-    //     console.log('decreasing speed', action.payload);
-    //     return this.state.speed - action.payload;
-    // } else if(action.type === 'passenger'){
+     else if(action.type === 'decrease'){
+        console.log('decreasing speed');
+        return state.speed - action.payload;
+    } 
+    // else if(action.type === 'passenger'){
     //     return {...state, passengers: action.payload}
     // }
     return state;
