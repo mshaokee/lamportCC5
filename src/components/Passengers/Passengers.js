@@ -23,7 +23,7 @@ class Passengers extends Component {
   };//end handleChange
 
   submitPassenger = () => {
-    console.log('submitting passenger');
+    console.log('submitting passenger', this.state.passengers);
     //dispatch passenger to redux
     // this.props.dispatch({
     //   type: 'passenger',
