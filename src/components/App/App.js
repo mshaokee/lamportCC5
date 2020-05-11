@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log('CHECK APP STATUS', this.props.reduxState);
-    console.log('DOES THIS WORK', this.props.dispatch);
+    // console.log('DOES THIS WORK', this.props.dispatch);
 
   }
 
@@ -41,15 +41,17 @@ class App extends Component {
             <Route
               exact path="/"
               render={(props) => <SpeedControl {...props}
+                speed={this.props.reduxState}
                 dispatch={this.props.dispatch} />} />
 
             <Route
               path="/passengers"
               render={(props) => <Passengers {...props}
+                passengers={this.props.reduxState}
                 dispatch={this.props.dispatch} />} />
             <Route
               path="/dashboard"
-              render={(props) => <SpeedControl {...props}
+              render={(props) => <Dashboard {...props}
                 dashboard={this.props.reduxState}
                 dispatch={this.props.dispatch} />} />
           </div>

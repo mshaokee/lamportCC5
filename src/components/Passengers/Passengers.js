@@ -41,6 +41,7 @@ class Passengers extends Component {
 
         <ul>
           {/* this should be dispatch info */}
+          {/* <li>{this.props.passengers}</li> */}
           <li>{this.state.passengers}</li>
         </ul>
       
