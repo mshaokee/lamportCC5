@@ -14,7 +14,7 @@ import Dashboard from '../Dashboard/Dashboard';
 class App extends Component {
 
   componentDidMount(){
-    console.log('CHECK APP STATUS');
+    console.log('CHECK APP STATUS', this.props.reduxState);
   }
 
   render() {
@@ -59,6 +59,6 @@ class App extends Component {
 }
 
 //make sure to connect
-const reduxStateToProps = (reduxState) => ({reduxState});
+const putReduxStateToProps = (reduxState) => ({reduxState});
 
-export default connect(reduxStateToProps)(App);
+export default connect(putReduxStateToProps)(App);

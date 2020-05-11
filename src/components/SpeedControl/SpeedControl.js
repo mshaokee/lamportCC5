@@ -31,12 +31,11 @@ class SpeedControl extends Component {
       this.setState({
         speed: this.state.speed - 1
       })
-      //dispatch to store information
-       //dispatch to store information
-      // this.props.dispatch({
-      //   type: 'decrease',
-      //   payload: 1
-      // })
+      // dispatch to store information
+      this.props.dispatch({
+        type: 'decrease',
+        payload: 1
+      })
     }
   };//end speedHandler
 
