@@ -20,11 +20,11 @@ const myReducer = (state = reducerInitialState, action) => {
     console.log('in myReducer', action, state);
     if(action.type === 'increase'){
         console.log('increasing speed');
-        return {speed: state.speed + 1};
+        return {...state, speed: state.speed + 1};
     } 
     else if(action.type === 'decrease'){
         console.log('decreasing speed');
-        return {speed: state.speed - 1};
+        return {...state, speed: state.speed - 1};
     } 
      if(action.type === 'passenger'){
         console.log('listing passengers', action.payload);
