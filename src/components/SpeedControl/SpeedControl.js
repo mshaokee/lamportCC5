@@ -43,7 +43,6 @@ class SpeedControl extends Component {
     return (
       <div>
         <h2>Speed Control</h2>
-
         <button onClick={(event) => this.speedHandler(event, 'increase')}>Increase Speed</button>
         {/* this should be dispatch info */}
         <p>{this.props.speed.speed}</p>
