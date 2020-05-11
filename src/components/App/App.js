@@ -49,6 +49,7 @@ class App extends Component {
             <Route
               path="/dashboard"
               dispatch={this.props.dispatch}
+              dashboard={this.props.reduxState}
               component={Dashboard}
             />
           </div>

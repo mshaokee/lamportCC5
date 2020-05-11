@@ -5,13 +5,18 @@ import React, { Component } from 'react';
 // YOU SHOULD DISPLAY THE COUNT OF PEOPLE CURRENTLY ON BOARD
 
 class Dashboard extends Component {
+
+  componentDidMount(){
+    console.log('Dashboard mounted', this.props.dashboard);
+  };//end componentDidMount
+
   render() {
     return (
       <div>
         <h2>Dashboard</h2>
-        
-        <p>SPEED: GOES HERE</p>
-        <p>PASSENGER COUNT: GOES HERE</p>
+{/*         
+        <p>{this.props.dashboard.speed}</p>
+        <p>{this.props.dashboard.passengers}</p> */}
       </div>
     )
   }

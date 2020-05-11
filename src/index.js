@@ -20,6 +20,8 @@ const myReducer = (state = reducerInitialState, action) => {
     // } else if(action.type === 'decrease'){
     //     console.log('decreasing speed', action.payload);
     //     return this.state.speed - action.payload;
+    // } else if(action.type === 'passenger'){
+    //     return {...state, passengers: action.payload}
     // }
     return state;
 };//end myReducer

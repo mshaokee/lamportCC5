@@ -9,6 +9,10 @@ class Passengers extends Component {
     passengers: []
   }
 
+  componentDidMount(){
+    console.log('Passengers mounted');
+  }
+
   handleChange = (event, property) => {
     console.log('in handleChange passengers', event.target.value);
     //changes passengers
@@ -36,6 +40,7 @@ class Passengers extends Component {
         <button onClick={this.submitPassenger}>Add Passenger</button>
 
         <ul>
+          {/* this should be dispatch info */}
           <li>{this.state.passengers}</li>
         </ul>
       
