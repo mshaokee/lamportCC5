@@ -11,11 +11,21 @@ class Passengers extends Component {
 
   handleChange = (event, property) => {
     console.log('in handleChange passengers', event.target.value);
+    //changes passengers
     this.setState({
       ...this.state.passengers,
       [property]: event.target.value
     })
   };//end handleChange
+
+  submitPassenger = () => {
+    console.log('submitting passenger');
+    //dispatch passenger to redux
+    // this.props.dispatch({
+    //   type: 'passenger',
+    //   payload: this.state.passengers
+    // })
+  };//end submitPassenger
 
   render() {
     return (
@@ -23,7 +33,7 @@ class Passengers extends Component {
         <h2>Passengers</h2>
 
         <input onChange={(event) => this.handleChange(event, 'passengers')}type="text" name="name" placeholder="Enter Name" />
-        <button>Add Passenger</button>
+        <button onClick={this.submitPassenger}>Add Passenger</button>
 
         <ul>
           <li>{this.state.passengers}</li>
