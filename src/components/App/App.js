@@ -40,6 +40,7 @@ class App extends Component {
           <div className="content-container">
             <Route
               exact path="/"
+              //do not mutate previous props and send down reduxState as needed
               render={(props) => <SpeedControl {...props}
                 speed={this.props.reduxState}
                 dispatch={this.props.dispatch} />} />
